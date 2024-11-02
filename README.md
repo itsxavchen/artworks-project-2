@@ -18,7 +18,7 @@ New users must sign up to access the artwork collection app, while registered us
 
 ## Deployment Link
 
-https://github.com/itsxavchen/artworks-project-2
+https://artworks-xkii-app-aa04f01620aa.herokuapp.com
 
 ## Planning Materials
 
