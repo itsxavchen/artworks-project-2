@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Editing <%= artwork.artworkName %></title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit <%= artwork.artworkName %></h1>
+  <form action="/users/<%= user._id %>/artworks/<%= artwork._id %>?_method=PUT" method="POST">
+    <label for="artworkName">Artwork Name:</label>
+    <input type="text" name="artworkName" id="artworkName" value="<%= artwork.artworkName %>">
+    <label for="artistName">Artist Name:</label>
+    <input type="text" name="artistName" id="artistName" value="<%= artwork.artistName %>">
+    <label for="materials">Materials:</label>
+    <input type="text" name="materials" id="materials" value="<%= artwork.materials %>">
+    <label for="size">Size:</label>
+    <input type="text" name="size" id="size" value="<%= artwork.size %>">
+    <label for="imageUrl">Artwork URL:</label>
+    <input type="text" name="imageUrl" id="imageUrl" value="<%= artwork.imageUrl %>">
+    <button type="submit">Update</button>
+  </form>
+
+</body>
+</html>

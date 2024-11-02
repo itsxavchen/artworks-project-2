@@ -1,0 +1,13 @@
+
+<nav>
+  <div class="nav-title">
+    <% if(user) { %>
+      <h1>XKII</h1>
+      <h2>@<%= user.username %></h2>
+  </div>
+  <div class="nav-button-wrapper">
+    <a href="/auth/sign-out" class="nav-button ghost-button">Sign Out</a>
+    <a href="/users/:userId/artworks" class="nav-button">Go Back</a>
+  </div>
+  <% } %>
+</nav>

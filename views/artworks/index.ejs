@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Your artworks</title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+    <div class="artwork-container">
+      <% artworks.forEach((artwork) => { %>
+        <div class="artwork-item">
+          <a href="/users/<%= user._id %>/artworks/<%= artwork._id %>" class="artwork-link-wraper">
+            <img src="<%= artwork.imageUrl %>" alt="artwork image" style="width: 280px; height: 280px;">
+          </a>
+          <h3><%= artwork.artworkName %></h3>
+          <h4><%= artwork.artistName %></h4>
+        </div>
+      <% }) %>
+    </div>
+  <a href="/users/<%=user._id%>/artworks/new" class="edit-button">
+    <img src="/assets/edit_icon.svg" alt="edit icon" style="width: 32px; height: 32px;">
+  </a>
+</body>
+</html>

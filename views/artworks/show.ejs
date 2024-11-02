@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title><%= artwork.artworkName %></title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+    <div class="artwork-wrapper">
+      <img src="<%= artwork.imageUrl %>" alt="artwork image" class="artwork-image">
+      <div class="artwork-detail-wrapper">
+        <h1><%= artwork.artworkName %></h1>
+        <h2><%= artwork.artistName %></h2>
+        <h3><%= artwork.materials %></h3>
+        <h3><%= artwork.size %></h3>
+        <a href="/users/<%= user._id %>/artworks/<%= artwork._id %>/edit" class="pencil-button">
+          <img src="/assets/pencil_icon.svg" alt="edit icon" style="width: 32px; height: 32px;">
+        </a>
+      </div>
+    </div>
+      <form action="/users/<%= user._id %>/artworks/<%= artwork._id %>?_method=DELETE" method="POST">
+        <button type="submit" class="delete-button">
+          <img src="/assets/bin_icon.svg" alt="bin icon" style="width: 32px; height: 32px;">
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

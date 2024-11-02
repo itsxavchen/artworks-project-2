@@ -1,0 +1,32 @@
+<!-- views/applications/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add Artwork</title>
+</head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add Artwork</h1>
+    <form action="/users/<%= user._id %>/artworks" method="POST">
+      <label for="artworkName">Artwork Name:</label>
+      <input type="text" name="artworkName" id="artworkName">
+
+      <label for="artistName">Artist Name:</label>
+      <input type="text" name="artistName" id="artistName">
+
+      <label for="materials">Materials:</label>
+      <input type="text" name="materials" id="materials">
+
+      <label for="size">Size:</label>
+      <input type="text" name="size" id="size">
+
+      <label for="imageUrl">Artwork URL:</label>
+      <input type="text" name="imageUrl" id="imageUrl"/>
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>

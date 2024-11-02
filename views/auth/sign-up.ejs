@@ -3,23 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>Sign Up</title>
 </head>
 <body>
-  <h1>Create a new account!</h1>
-  <form action="/auth/sign-up" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <label for="confirmPassword">Confirm Password:</label>
-    <input 
-      type="password"
-      name="confirmPassword"
-      id="confirmPassword"
-      required 
-    />
-    <button type="submit">Sign up</button>
-  </form>
+  <div class="home-wrapper">
+
+    <div class="home-content-left-wrapper">
+      <img src="/assets/signup_image.jpg" alt="signup image"
+      class="home-image">
+      <p class="paragraph-font home-image-title">Szabolcs Bozó</p>
+   </div> 
+  
+   <div class="home-content-right-wrapper">
+      <h1>Sign up</h1>
+      <form action="/auth/sign-up" method="POST" class="form-wrapper">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input 
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          required 
+        />
+        <button type="submit" class="sign-in-button">Sign up</button>
+      </form>
+      <div class="termsandconditions-wrapper">
+        <p class="paragraph-font">
+            By signing up, you agree to our Terms and Conditions and Privacy Policy.
+        </p>   
+      </div>
+   </div>
+  </div>  
 </body>
 </html>
